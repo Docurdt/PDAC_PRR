@@ -1,0 +1,563 @@
+{
+  "schema_version": 1,
+  "release_version": "0.1.0",
+  "target_repository": "https://github.com/Docurdt/PDAC_PRR",
+  "ensemble": {
+    "inner_folds": 5,
+    "epochs_per_fold": 5,
+    "aggregation": "mean epochs within fold, then mean five folds"
+  },
+  "models": {
+    "esc": {
+      "class": "ESC",
+      "hidden_dim": 64,
+      "num_heads": 4,
+      "dropout": 0.3,
+      "output": "softmax(logits)[:,1]",
+      "expected_checkpoints": [
+        {
+          "name": "model_epoch_11_outloop_1_innerloop_1_val_loss_-0.629056.pth",
+          "size": 1755355,
+          "sha256": "999da25979c52d2204e149f427b56566d180abbbb5229c0b0f235db9f0ac67a3"
+        },
+        {
+          "name": "model_epoch_11_outloop_1_innerloop_3_val_loss_-1.006292.pth",
+          "size": 1755355,
+          "sha256": "f4a39c70baf1289de184f1b1df088289634f917cffbedb96aac1ae7dcf251c3e"
+        },
+        {
+          "name": "model_epoch_15_outloop_1_innerloop_5_val_loss_-0.691481.pth",
+          "size": 1755355,
+          "sha256": "e3703b4a85546cfea0f8cd3922020f8994feb2ebf368d548217b54e20c60c3bd"
+        },
+        {
+          "name": "model_epoch_17_outloop_1_innerloop_2_val_loss_-0.696158.pth",
+          "size": 1755355,
+          "sha256": "234d7dd0afccd10139467fb0422629f8c7f14d3ffed4a70c6bdb315806013325"
+        },
+        {
+          "name": "model_epoch_18_outloop_1_innerloop_1_val_loss_-0.579951.pth",
+          "size": 1755355,
+          "sha256": "4a050905c395b331005cc3e0d278df240e8e011ccec5f4905394884c677eab98"
+        },
+        {
+          "name": "model_epoch_18_outloop_1_innerloop_2_val_loss_-0.817785.pth",
+          "size": 1755355,
+          "sha256": "091c7d25f79dc786f5869513f1ce9810875276518eac8b6f2a50367811013d72"
+        },
+        {
+          "name": "model_epoch_18_outloop_1_innerloop_5_val_loss_-0.662909.pth",
+          "size": 1755355,
+          "sha256": "5ee6a5985a07bbc668205dbc8060c031bc7170acf2095b72439344094b53fba1"
+        },
+        {
+          "name": "model_epoch_20_outloop_1_innerloop_2_val_loss_-0.716626.pth",
+          "size": 1755355,
+          "sha256": "e896b841d02720f8d713688f75af32c59e5a1ffdd4c8e8966a946b93b5c8ceef"
+        },
+        {
+          "name": "model_epoch_20_outloop_1_innerloop_3_val_loss_-0.996282.pth",
+          "size": 1755355,
+          "sha256": "8e1a0b589cec6de235aa1e00f6846557a5c45705445197a7f74cbb571677ce4d"
+        },
+        {
+          "name": "model_epoch_23_outloop_1_innerloop_3_val_loss_-1.009473.pth",
+          "size": 1755355,
+          "sha256": "45891be3f8e9b8170390dd66745413c998f1bf8ec6c5becfe9a1fa809ad3ae65"
+        },
+        {
+          "name": "model_epoch_23_outloop_1_innerloop_5_val_loss_-0.650749.pth",
+          "size": 1755355,
+          "sha256": "774f0ae8c194fd411b019346c95b215d2986fb6a6255c8a8e25cbd094ad09e9a"
+        },
+        {
+          "name": "model_epoch_25_outloop_1_innerloop_2_val_loss_-0.757978.pth",
+          "size": 1755355,
+          "sha256": "89521dc5688d08eeaf7806e1e1e4e549e53919485503881de81ea756c4545a02"
+        },
+        {
+          "name": "model_epoch_2_outloop_1_innerloop_5_val_loss_-0.899198.pth",
+          "size": 1755294,
+          "sha256": "26383e4ababbdf9bae795fc565e3a9f975aadb32f3537a541ee9287ef41f3b6d"
+        },
+        {
+          "name": "model_epoch_32_outloop_1_innerloop_2_val_loss_-0.789278.pth",
+          "size": 1755355,
+          "sha256": "3b1d607d4e801ae671734782e386f7f2da3ec7d7104b6f1d95222f9c071e7943"
+        },
+        {
+          "name": "model_epoch_34_outloop_1_innerloop_4_val_loss_-0.941556.pth",
+          "size": 1755355,
+          "sha256": "18bc92749f9d74e823bb6c057ab9e953e8ecff69a689053c6c1da9ab378b8e79"
+        },
+        {
+          "name": "model_epoch_35_outloop_1_innerloop_3_val_loss_-0.969092.pth",
+          "size": 1755355,
+          "sha256": "a65c99fe512ff0a458b6c46aaab1ff8bfe5ada7f310074009e5f47a482c1b955"
+        },
+        {
+          "name": "model_epoch_3_outloop_1_innerloop_1_val_loss_-0.574662.pth",
+          "size": 1755294,
+          "sha256": "d42105dceb69b5f786edfd65a0156893da926779b5d4d671374b967bcf404327"
+        },
+        {
+          "name": "model_epoch_42_outloop_1_innerloop_3_val_loss_-0.964591.pth",
+          "size": 1755355,
+          "sha256": "1e6b3ea63e509577e2d68627b7aff3e5c4aeb066eb5f931963f6628b96511a29"
+        },
+        {
+          "name": "model_epoch_5_outloop_1_innerloop_5_val_loss_-0.640719.pth",
+          "size": 1755294,
+          "sha256": "2f79fe9035b9e4a6c45c10a355d7442a7b8515695ec81fcbbf66c9167f571cda"
+        },
+        {
+          "name": "model_epoch_6_outloop_1_innerloop_1_val_loss_-0.550673.pth",
+          "size": 1755294,
+          "sha256": "7a6dc948104fd78b3d76a568bfa9f86e6df1b3132437f62ff5e300775582866e"
+        },
+        {
+          "name": "model_epoch_6_outloop_1_innerloop_4_val_loss_-0.993852.pth",
+          "size": 1755294,
+          "sha256": "ba947be0638d3ce3831ab40b5c596d1f33e187ca267dbcc78eec169eb5cc6f77"
+        },
+        {
+          "name": "model_epoch_7_outloop_1_innerloop_1_val_loss_-0.562028.pth",
+          "size": 1755294,
+          "sha256": "41a6f482426e9d1d52b5b3da94504cdfa3780e841c269acf375c4a5dda5abe5f"
+        },
+        {
+          "name": "model_epoch_7_outloop_1_innerloop_4_val_loss_-0.954117.pth",
+          "size": 1755294,
+          "sha256": "92117798127dcdf115880cc04f50050c6a1b531501656eae75d5752fa5ebe98a"
+        },
+        {
+          "name": "model_epoch_8_outloop_1_innerloop_4_val_loss_-1.104973.pth",
+          "size": 1755294,
+          "sha256": "1dc9bda7939cf7330555ecb8c3bcc2595e8a6fec4df744c0c6d20ecf24524474"
+        },
+        {
+          "name": "model_epoch_9_outloop_1_innerloop_4_val_loss_-0.968213.pth",
+          "size": 1755294,
+          "sha256": "8439b6b4d9fed89be1580fc08a7e5075ab1a90156cb46d9174b64cb12b0244b6"
+        }
+      ],
+      "original_ensemble": "mean of checkpoint predictions within each inner fold, then mean of five folds",
+      "weight_directory": "weights/esc",
+      "release_asset": "PDAC_PRR_esc_weights_v0.1.0.zip"
+    },
+    "prrpath": {
+      "class": "PRRPath",
+      "embed_dim": 128,
+      "num_heads": 4,
+      "num_layers": 2,
+      "dropout": 0.4,
+      "output": "prognostic risk score",
+      "expected_checkpoints": [
+        {
+          "name": "model_epoch_10_outloop_1_innerloop_1_val_loss_2.216099.pth",
+          "size": 154612,
+          "sha256": "c3e0117b2f702e9c68e4a5a6893201cf58e9d773078e3343c18735a5f8051bdd"
+        },
+        {
+          "name": "model_epoch_10_outloop_1_innerloop_4_val_loss_2.475674.pth",
+          "size": 154612,
+          "sha256": "935d2b78cb80a41b84e3ccb96050a816f805704230580dad9af1348f92751de5"
+        },
+        {
+          "name": "model_epoch_13_outloop_1_innerloop_1_val_loss_2.217098.pth",
+          "size": 154612,
+          "sha256": "820571a542025db88de1255abaa37b532f3131792542d29b4f079dd7cb9377c4"
+        },
+        {
+          "name": "model_epoch_15_outloop_1_innerloop_5_val_loss_2.434526.pth",
+          "size": 154612,
+          "sha256": "9f76c033b076211a06755e7bd5c141aeca6c05c6e1416dcc019cc49909c41162"
+        },
+        {
+          "name": "model_epoch_18_outloop_1_innerloop_5_val_loss_2.445748.pth",
+          "size": 154612,
+          "sha256": "4045852bde3ebfc138994e3f9de664224793ab0348e14c2a2f73cddb1b9c7b2a"
+        },
+        {
+          "name": "model_epoch_19_outloop_1_innerloop_2_val_loss_2.422764.pth",
+          "size": 154612,
+          "sha256": "166575048875eb84ffcee4fbfdf2ec65b859449ffc1937095891a1beeabc153e"
+        },
+        {
+          "name": "model_epoch_25_outloop_1_innerloop_5_val_loss_2.439161.pth",
+          "size": 154612,
+          "sha256": "9e8c019a071e81caadceb53ec08a49642d12cdfe1890c709f7756fc254186ff0"
+        },
+        {
+          "name": "model_epoch_2_outloop_1_innerloop_4_val_loss_2.468171.pth",
+          "size": 154536,
+          "sha256": "e1c7d59f9fe7bb4075d30045f93486eec2fc1b222d3c39982c38b24974021854"
+        },
+        {
+          "name": "model_epoch_30_outloop_1_innerloop_5_val_loss_2.440968.pth",
+          "size": 154612,
+          "sha256": "d84af79afd2cdead096540808ebaeb165a94cb6f0d1eb1a9814a6e3ede931e05"
+        },
+        {
+          "name": "model_epoch_3_outloop_1_innerloop_2_val_loss_2.408571.pth",
+          "size": 154536,
+          "sha256": "66b5d38b3feec78de08b036138f89a96f149ca9952192bc52bb09aea551eb6de"
+        },
+        {
+          "name": "model_epoch_3_outloop_1_innerloop_4_val_loss_2.455061.pth",
+          "size": 154536,
+          "sha256": "6f4dfc395179dcf9652c05301feb09a4cb1087f8c868b18a38e3a874c95c4ee7"
+        },
+        {
+          "name": "model_epoch_44_outloop_1_innerloop_3_val_loss_2.423042.pth",
+          "size": 154612,
+          "sha256": "b834e7d9fa39b2a106eeee2e3031ac62e750cabd185e566a1fee8f46a9acce51"
+        },
+        {
+          "name": "model_epoch_45_outloop_1_innerloop_3_val_loss_2.415479.pth",
+          "size": 154612,
+          "sha256": "5255d9b074401c004c0acb996c4d75a74234aada91e1077db52ebd9a813865d3"
+        },
+        {
+          "name": "model_epoch_46_outloop_1_innerloop_3_val_loss_2.424090.pth",
+          "size": 154612,
+          "sha256": "5d14005287c141988c9869ae71eb63b8e2672e7ca6052a7b77c08745b9f752ed"
+        },
+        {
+          "name": "model_epoch_50_outloop_1_innerloop_3_val_loss_2.420438.pth",
+          "size": 154612,
+          "sha256": "a0b0d0373a6c42bd514b9559102907d7ddba14d55483caf991dde8f0fa105397"
+        },
+        {
+          "name": "model_epoch_5_outloop_1_innerloop_1_val_loss_2.213470.pth",
+          "size": 154536,
+          "sha256": "22ef4dd48adace9a5cffbe49cad6090ad307f91d466ac6558673ec26dc980e4a"
+        },
+        {
+          "name": "model_epoch_5_outloop_1_innerloop_2_val_loss_2.428693.pth",
+          "size": 154536,
+          "sha256": "6d58f72e82365bcf072d4366dae1a2f29c8a79a58250125445dddf9d651ceaf7"
+        },
+        {
+          "name": "model_epoch_5_outloop_1_innerloop_4_val_loss_2.470886.pth",
+          "size": 154536,
+          "sha256": "999bbca2d144cdd24dd30a65e7cb9866bd2dff6fb10014009693872d0f65bca4"
+        },
+        {
+          "name": "model_epoch_61_outloop_1_innerloop_3_val_loss_2.424754.pth",
+          "size": 154612,
+          "sha256": "a0165e40ad416f06c2ee3a0da391e543be762256f37dde2f1a0021aadd467501"
+        },
+        {
+          "name": "model_epoch_7_outloop_1_innerloop_1_val_loss_2.224192.pth",
+          "size": 154536,
+          "sha256": "005ef7aea728a088ecb76e3a6199690b8c4e564a7beb93fa6542554974fdc92e"
+        },
+        {
+          "name": "model_epoch_7_outloop_1_innerloop_4_val_loss_2.474362.pth",
+          "size": 154536,
+          "sha256": "f4f7cddde057171fd2574f64348c1d9c7268e28a669e7cb1ecdb6182b9532c78"
+        },
+        {
+          "name": "model_epoch_8_outloop_1_innerloop_1_val_loss_2.207097.pth",
+          "size": 154536,
+          "sha256": "59dad6450da79d0984c95af4a1485c141e1540b21d4fc27b7002fe6a19299c0f"
+        },
+        {
+          "name": "model_epoch_8_outloop_1_innerloop_2_val_loss_2.405789.pth",
+          "size": 154536,
+          "sha256": "eeb1d1a16d6f515ccdecc37ded45fb79d852807f4b97a50a860bf53f9cc87c17"
+        },
+        {
+          "name": "model_epoch_8_outloop_1_innerloop_5_val_loss_2.446695.pth",
+          "size": 154536,
+          "sha256": "cf30cefc1751a5f7acb6a27467d740faa25ed46733900272ca257e9cbbe58adc"
+        },
+        {
+          "name": "model_epoch_9_outloop_1_innerloop_2_val_loss_2.425529.pth",
+          "size": 154536,
+          "sha256": "692a6442d5399445a68d150b7f9bee88efa259072c7bd6dad3cf644d98464d5f"
+        }
+      ],
+      "original_ensemble": "mean of checkpoint predictions within each inner fold, then mean of five folds",
+      "weight_directory": "weights/prrpath",
+      "release_asset": "PDAC_PRR_prrpath_weights_v0.1.0.zip"
+    },
+    "prrpath_text": {
+      "class": "PRRPathText",
+      "embed_dim": 256,
+      "num_heads": 4,
+      "num_layers": 3,
+      "dropout": 0.35,
+      "output": "prognostic risk score",
+      "expected_checkpoints": [
+        {
+          "name": "model_epoch_10_outloop_1_innerloop_2_val_loss_2.401492.pth",
+          "size": 95778002,
+          "sha256": "7881c1156d67b7da987eae3adcffdff59d7260ed038b693243eba6074eca131a"
+        },
+        {
+          "name": "model_epoch_11_outloop_1_innerloop_1_val_loss_2.194072.pth",
+          "size": 95778002,
+          "sha256": "1e4c81be4f56099b5f98f50572a0f5cc8388cbbb28aa3038c09cfd56374acb9d"
+        },
+        {
+          "name": "model_epoch_16_outloop_1_innerloop_1_val_loss_2.197992.pth",
+          "size": 95778002,
+          "sha256": "70187894fa8cc4764614f85a74790786db25cfbb607140d0449265bd4a71a23b"
+        },
+        {
+          "name": "model_epoch_16_outloop_1_innerloop_2_val_loss_2.418487.pth",
+          "size": 95778002,
+          "sha256": "af05aaea8f586ede3d3c3eb02ded2951b8a05766876d701033f872dfc1c3ba31"
+        },
+        {
+          "name": "model_epoch_19_outloop_1_innerloop_1_val_loss_2.206007.pth",
+          "size": 95778002,
+          "sha256": "1dbc6b9e2b17311b912cf8852ff6fa767da97ec165d9715581f7d9754c58dfbd"
+        },
+        {
+          "name": "model_epoch_25_outloop_1_innerloop_2_val_loss_2.420964.pth",
+          "size": 95778002,
+          "sha256": "67c07ae6542f5a614bd4989af8b0e92ac32c67fc12cd996bb084b372f4c9a999"
+        },
+        {
+          "name": "model_epoch_26_outloop_1_innerloop_3_val_loss_2.440055.pth",
+          "size": 95778002,
+          "sha256": "abd444e8a4a4c4d0d80e2c1fbd8e634160376591976f23b733b3b9c673c0e655"
+        },
+        {
+          "name": "model_epoch_27_outloop_1_innerloop_3_val_loss_2.441096.pth",
+          "size": 95778002,
+          "sha256": "27d5efdea7e3e6bf813e0306e464b44f614baad7218e5a08185fcc90cc7e8a3e"
+        },
+        {
+          "name": "model_epoch_28_outloop_1_innerloop_3_val_loss_2.441732.pth",
+          "size": 95778002,
+          "sha256": "601c7252a65282694037204329b8315090dce88734a3242d16a99c0f466735d5"
+        },
+        {
+          "name": "model_epoch_30_outloop_1_innerloop_2_val_loss_2.406630.pth",
+          "size": 95778002,
+          "sha256": "02ce20676269b23b1a42c2afb9b74f0cefdf53554ada1445d6f4bd7527bc291d"
+        },
+        {
+          "name": "model_epoch_36_outloop_1_innerloop_3_val_loss_2.441104.pth",
+          "size": 95778002,
+          "sha256": "7082d255d5571380eb6b334f959cf3014f8b35c24c0e5d3854b966e9234e6a0b"
+        },
+        {
+          "name": "model_epoch_3_outloop_1_innerloop_4_val_loss_2.473099.pth",
+          "size": 95777818,
+          "sha256": "e994f81106fcccdf82030f8ea7790580b913035df0c1af5a6ea3a5244a4e7775"
+        },
+        {
+          "name": "model_epoch_40_outloop_1_innerloop_3_val_loss_2.435042.pth",
+          "size": 95778002,
+          "sha256": "21687c61a4a7857698115b817c568e2f9502987ed9531ee46747a447c432276c"
+        },
+        {
+          "name": "model_epoch_4_outloop_1_innerloop_4_val_loss_2.460334.pth",
+          "size": 95777818,
+          "sha256": "c3491f63f2731adaadbdc42db326022978f8fa42de5f5126323816f340f026d9"
+        },
+        {
+          "name": "model_epoch_52_outloop_1_innerloop_5_val_loss_2.397679.pth",
+          "size": 95778002,
+          "sha256": "489c6d2d51608c52e96f04659d925b3b45520eaf811d84b95d2871bf910f91e1"
+        },
+        {
+          "name": "model_epoch_59_outloop_1_innerloop_5_val_loss_2.398773.pth",
+          "size": 95778002,
+          "sha256": "3788e4794091ba7afac81261a86e185bc2c21efe21c26dcc40d046c900217f75"
+        },
+        {
+          "name": "model_epoch_5_outloop_1_innerloop_1_val_loss_2.196659.pth",
+          "size": 95777818,
+          "sha256": "8b020d0c29aee394c2b47317749413acf144d30d3ff7e5a353f6bf4dfa4e3afe"
+        },
+        {
+          "name": "model_epoch_5_outloop_1_innerloop_4_val_loss_2.468095.pth",
+          "size": 95777818,
+          "sha256": "c9a1035f5d2c6b1e457ce43f3a0a8b4ed8213e10f535659f818cd262a6b67b50"
+        },
+        {
+          "name": "model_epoch_66_outloop_1_innerloop_5_val_loss_2.398038.pth",
+          "size": 95778002,
+          "sha256": "bc541afa974e8f884be9d0528a0c0ce365413d9fe89c1982ce5f634489a12fd0"
+        },
+        {
+          "name": "model_epoch_68_outloop_1_innerloop_5_val_loss_2.397044.pth",
+          "size": 95778002,
+          "sha256": "17c345fc3c300dc27b2fff5268c76ea3c12e51d811cffde56c02eb926d45d8ee"
+        },
+        {
+          "name": "model_epoch_69_outloop_1_innerloop_5_val_loss_2.393930.pth",
+          "size": 95778002,
+          "sha256": "d4e625cdc4c7e2ae19e89c484b58bff5488df9a5d8a06879e50120724fd0b11a"
+        },
+        {
+          "name": "model_epoch_6_outloop_1_innerloop_1_val_loss_2.186816.pth",
+          "size": 95777818,
+          "sha256": "3b4ab43ff0f460a845623e7e290696856d26f98956dfcf380b78d47bb8ca0d05"
+        },
+        {
+          "name": "model_epoch_6_outloop_1_innerloop_2_val_loss_2.407045.pth",
+          "size": 95777818,
+          "sha256": "fac84adf1dfd58a4789bd6cdd447b3c382fe6eff6d32184a7709d6e08b3c3f27"
+        },
+        {
+          "name": "model_epoch_8_outloop_1_innerloop_4_val_loss_2.466055.pth",
+          "size": 95777818,
+          "sha256": "1396733a38dc124f4b0cf0824d84d5dca5d3b37cb8587b45f88e4e567ebed9d8"
+        },
+        {
+          "name": "model_epoch_9_outloop_1_innerloop_4_val_loss_2.426145.pth",
+          "size": 95777818,
+          "sha256": "6edfdd2b7e00e917ae0f033c8f79dffd7a0e5cd3833172770af3d7145a7f30bc"
+        }
+      ],
+      "original_ensemble": "mean of checkpoint predictions within each inner fold, then mean of five folds",
+      "weight_directory": "weights/prrpath_text",
+      "release_asset": null
+    },
+    "prrfull": {
+      "class": "PRRFull",
+      "embed_dim": 512,
+      "num_heads": 4,
+      "num_layers": 3,
+      "dropout": 0.4,
+      "output": "prognostic risk score",
+      "expected_checkpoints": [
+        {
+          "name": "model_epoch_11_outloop_1_innerloop_1_val_loss_2.181644.pth",
+          "size": 110166310,
+          "sha256": "2dbd28a57ae9fa43d9d306bdb524197987d29e9697d3f8cb7d294b0d2bd25875"
+        },
+        {
+          "name": "model_epoch_11_outloop_1_innerloop_4_val_loss_2.453251.pth",
+          "size": 110166310,
+          "sha256": "fadb8017aa125dedd5d8b6faf6544a05fea4fa595173d020f68917a52be8f9e4"
+        },
+        {
+          "name": "model_epoch_16_outloop_1_innerloop_2_val_loss_2.417783.pth",
+          "size": 110166310,
+          "sha256": "0a7ce502d030d2cefc26c5c12be86ada93ee14cdbb7674d473d8e2bc7901a6e9"
+        },
+        {
+          "name": "model_epoch_19_outloop_1_innerloop_3_val_loss_2.457093.pth",
+          "size": 110166310,
+          "sha256": "cc7dae0ad8fe90a113fbc40c3a3aafbb8e9f91c86577ccb14f2c190b1e059ac4"
+        },
+        {
+          "name": "model_epoch_20_outloop_1_innerloop_1_val_loss_2.196343.pth",
+          "size": 110166310,
+          "sha256": "a0cbda2aec6412edaad2c048cea7a268e239d28d0d03e638514980c5498ff75b"
+        },
+        {
+          "name": "model_epoch_22_outloop_1_innerloop_5_val_loss_2.404271.pth",
+          "size": 110166310,
+          "sha256": "80f2699134652f97b12b94e98613aa17573fd23ebddc238708fcb7441914f1f7"
+        },
+        {
+          "name": "model_epoch_24_outloop_1_innerloop_5_val_loss_2.404064.pth",
+          "size": 110166310,
+          "sha256": "926322db86083017a36781f4139bddaf84c75ff95edc49f033d7fe394808f447"
+        },
+        {
+          "name": "model_epoch_28_outloop_1_innerloop_2_val_loss_2.414639.pth",
+          "size": 110166310,
+          "sha256": "fc465acdeb568f813acae8f36673277c67b1b2abaa6b8dfc3705ffaa6026088d"
+        },
+        {
+          "name": "model_epoch_29_outloop_1_innerloop_2_val_loss_2.414312.pth",
+          "size": 110166310,
+          "sha256": "3eaad812a9d4971c6ab3004a1b1761821e0421103cdc3a5eb0a0a73153e4cfdf"
+        },
+        {
+          "name": "model_epoch_31_outloop_1_innerloop_2_val_loss_2.415309.pth",
+          "size": 110166310,
+          "sha256": "c2f335a880390cb4ef389b88a5d4603cea89e0d4de5ed549e391397c92c45ab8"
+        },
+        {
+          "name": "model_epoch_32_outloop_1_innerloop_2_val_loss_2.417863.pth",
+          "size": 110166310,
+          "sha256": "26dd5e6a9d3299c0b0915a9ad929ab16b57541b0174c81707be6a8eb4c87052f"
+        },
+        {
+          "name": "model_epoch_32_outloop_1_innerloop_3_val_loss_2.450105.pth",
+          "size": 110166310,
+          "sha256": "c438d0cc0c0fb5f801e76c6860cb4fa9d0fa5af0cd9bf10927206b4298cbccb0"
+        },
+        {
+          "name": "model_epoch_33_outloop_1_innerloop_3_val_loss_2.453948.pth",
+          "size": 110166310,
+          "sha256": "f82314e54469c81f5921d082f45688e066ff5ece3bfc9897ea29d0c2cdcf6f38"
+        },
+        {
+          "name": "model_epoch_34_outloop_1_innerloop_3_val_loss_2.456501.pth",
+          "size": 110166310,
+          "sha256": "a81df9de5302e4fe576803b331a170fee25ba994298f4dc6b3af45d7a9fbbf05"
+        },
+        {
+          "name": "model_epoch_38_outloop_1_innerloop_3_val_loss_2.455037.pth",
+          "size": 110166310,
+          "sha256": "3509e6ffd7e2a3a2910cba9c687ac7c191cf2ef806461977bb58592dbc4220de"
+        },
+        {
+          "name": "model_epoch_44_outloop_1_innerloop_5_val_loss_2.403616.pth",
+          "size": 110166310,
+          "sha256": "daf6cc61fc4b8a613ae73e44e3365bdaf58565c10d48e9a6c45779bbfe7d5a48"
+        },
+        {
+          "name": "model_epoch_47_outloop_1_innerloop_5_val_loss_2.406607.pth",
+          "size": 110166310,
+          "sha256": "c742d0a6ad1f7e7f72a25d172f2084ef046cc25d8e51591074696b65f472c512"
+        },
+        {
+          "name": "model_epoch_4_outloop_1_innerloop_4_val_loss_2.473891.pth",
+          "size": 110164810,
+          "sha256": "4efb71f0d69c258210cc519e5b7c6e62ea59183c99a4ccb2a5294005ec51db86"
+        },
+        {
+          "name": "model_epoch_50_outloop_1_innerloop_5_val_loss_2.401350.pth",
+          "size": 110166310,
+          "sha256": "eb5f8b25108d29cc2e2ea9f4b33cdc89c920da7840b7bb7a7f56074f35f6d563"
+        },
+        {
+          "name": "model_epoch_5_outloop_1_innerloop_4_val_loss_2.466027.pth",
+          "size": 110164810,
+          "sha256": "36725890145949f9d3fc6c1422352e6feb86fe6917a52210cddfee205f1c2858"
+        },
+        {
+          "name": "model_epoch_6_outloop_1_innerloop_1_val_loss_2.184518.pth",
+          "size": 110164810,
+          "sha256": "e7ecfb8085c534637aea4272a50b7784c7ad8ec7240e25738915d7a03c0f2136"
+        },
+        {
+          "name": "model_epoch_6_outloop_1_innerloop_4_val_loss_2.452009.pth",
+          "size": 110164810,
+          "sha256": "a7aa7e8f957c7d6fd9cecc8cc87a376134e42fd4933b44508459a74a608dc3a1"
+        },
+        {
+          "name": "model_epoch_7_outloop_1_innerloop_1_val_loss_2.180278.pth",
+          "size": 110164810,
+          "sha256": "7490ef61e2f5600415bfa92466dddd7bb14c45f7b3667abf907075f92f3fb70c"
+        },
+        {
+          "name": "model_epoch_8_outloop_1_innerloop_4_val_loss_2.441962.pth",
+          "size": 110164810,
+          "sha256": "d67c182df004e8916f3033c2c53cfe0cb0f941bbbb0b22495ccdd2776704f0c0"
+        },
+        {
+          "name": "model_epoch_9_outloop_1_innerloop_1_val_loss_2.179224.pth",
+          "size": 110164810,
+          "sha256": "ac258d69f834b34baa25766313a5d423925c433831dfdf3cb8ceb994c9b330d9"
+        }
+      ],
+      "original_ensemble": "mean of checkpoint predictions within each inner fold, then mean of five folds",
+      "weight_directory": "weights/prrfull",
+      "release_asset": null
+    }
+  }
+}

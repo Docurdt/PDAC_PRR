@@ -1,0 +1,50 @@
+[
+  {
+    "release_name": "ESC",
+    "source_sha256": "952123b1778fb2364f6da753c676a819ea0f522d11c775e3069a9e54bb9b0c1e",
+    "cell": 18,
+    "original_class": "DualAttentionMIL",
+    "local_adjustments": [
+      "class renamed for unique import"
+    ],
+    "source_notebook": "_02_SRC_2507_longsur_HE/model_LongSur_HE.ipynb",
+    "cell_index_base": 0
+  },
+  {
+    "release_name": "PRRPath",
+    "source_sha256": "87c73da861295e58ad396113947583f519caff0ff5ff6a394422257b11231fd8",
+    "cell": 16,
+    "original_class": "MultiModalMILTransformer",
+    "local_adjustments": [
+      "class renamed for unique import",
+      "undefined auxiliary return value replaced by None; score computation unchanged"
+    ],
+    "source_notebook": "_03_SRC_2507_HR_HE_simplemodel/model_HR_HE_simple.ipynb",
+    "cell_index_base": 0
+  },
+  {
+    "release_name": "PRRPathText",
+    "source_sha256": "6ce680e0671bdb0a56fc99ab165001c88c0252bee233626bb3b79acea0fcf7fe",
+    "cell": 17,
+    "original_class": "MultiModalMIL",
+    "local_adjustments": [
+      "class renamed for unique import",
+      "undefined auxiliary return value replaced by None; score computation unchanged"
+    ],
+    "source_notebook": "_05_SRC_2507_HR_multimodal_simplemodel/model_HR_multimodal.ipynb",
+    "cell_index_base": 0
+  },
+  {
+    "release_name": "PRRFull",
+    "source_sha256": "d65f1564bf04091a3e4901afa07af89ede6a28f885d80cac24ac4531682d5449",
+    "cell": 19,
+    "original_class": "MultiModalMIL",
+    "local_adjustments": [
+      "class renamed for unique import",
+      "removed stray plus, equivalent to last valid saved definition",
+      "undefined auxiliary return value replaced by None; score computation unchanged"
+    ],
+    "source_notebook": "_06_SRC_2507_HR_multimodal3_simplemodel/model_HR_multimodal3.ipynb",
+    "cell_index_base": 0
+  }
+]

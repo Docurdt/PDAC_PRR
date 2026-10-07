@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdac-prr"
+version = "0.1.0"
+description = "Result-linked ESC and multimodal prognostic risk inference for PDAC"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = {file = "LICENSE"}
+dependencies = ["torch==2.5.1", "numpy==1.26.4", "scikit-learn==1.5.2", "h5py==3.12.1"]
+
+[project.optional-dependencies]
+text = ["transformers==5.1.0"]
+ui = ["streamlit==1.40.2"]
+
+[project.scripts]
+pdac-prr = "pdac_prr.cli:main"
+pdac-prr-weights = "pdac_prr.weights:main"
+
+[tool.setuptools.packages.find]
+include = ["pdac_prr*"]

@@ -1,0 +1,70 @@
+{
+  "release_version": "0.1.0",
+  "validation_date": "2026-10-07",
+  "source_ready_for_upload": true,
+  "published_to_github": false,
+  "license": "MIT",
+  "source_license_selection": "recommended default prepared locally; author can change before upload",
+  "model_families_in_source": [
+    "esc",
+    "prrpath",
+    "prrpath_text",
+    "prrfull"
+  ],
+  "complete_weight_archives": [
+    "esc",
+    "prrpath"
+  ],
+  "incomplete_weight_archives": [
+    "prrpath_text",
+    "prrfull"
+  ],
+  "expected_checkpoints_per_family": 25,
+  "source_server_strict_load_count": 100,
+  "local_archived_checkpoints_verified": 50,
+  "definition_conformance": {
+    "esc": {
+      "source_ast_matches": true,
+      "synthetic_score_max_abs_difference": 0.0,
+      "local_checkpoints_strict_loaded": 25
+    },
+    "prrpath": {
+      "source_ast_matches": true,
+      "synthetic_score_max_abs_difference": 0.0,
+      "local_checkpoints_strict_loaded": 25
+    },
+    "prrpath_text": {
+      "source_ast_matches": true,
+      "synthetic_score_max_abs_difference": 0.0,
+      "local_checkpoints_strict_loaded": 1
+    },
+    "prrfull": {
+      "source_ast_matches": true,
+      "synthetic_score_max_abs_difference": 0.0,
+      "local_checkpoints_strict_loaded": 0
+    }
+  },
+  "synthetic_h5_workflow": {
+    "passed": true,
+    "embedding_max_abs_difference": 0.0,
+    "risk_max_abs_difference": 0.0,
+    "clinical_order_and_cohort_transform_checked": true
+  },
+  "text_adapter": {
+    "passed": true,
+    "shape": [
+      2,
+      768
+    ],
+    "real_pretrained_bert_tested_locally": false
+  },
+  "streamlit_initial_render": {
+    "passed": true,
+    "exception_count": 0
+  },
+  "automated_tests_passed": 4,
+  "raw_wsi_end_to_end_tested": false,
+  "manuscript_text_reconciled": false,
+  "server_files_modified": false,
+  "weight_distribution_license": "not specified by the source-only license"
+}
