@@ -6,7 +6,7 @@ PRRpath+text、PRRfull 的推理定义及输入预处理工具。技术参数以
 
 ## 上传到 GitHub
 
-1. 解压 `PDAC_PRR_source_v0.1.0_20261007.zip`。
+1. 解压 `PDAC_PRR_source_v0.1.0_complete_20261008.zip`。
 2. 将其中 `PDAC_PRR` 目录里的文件上传到
    [Docurdt/PDAC_PRR](https://github.com/Docurdt/PDAC_PRR) 仓库根目录，
    使 `README.md`、`pdac_prr/` 和 `model_manifest.json` 位于根目录。
@@ -15,9 +15,23 @@ PRRpath+text、PRRfull 的推理定义及输入预处理工具。技术参数以
 4. 模型 ZIP 放在 GitHub Releases 的附件区。安装工具会按清单逐文件验证
    SHA-256；模型二进制不进入普通 Git 提交。
 
-本次先交付完整源码，以及已核验的 ESC、PRRpath 两个权重 ZIP。图文和全模态
-权重归档尚未完成，不能把这次交付描述为全部模型权重已经发布。源码许可证
-先按 MIT 准备；权重发布许可需作者单独确定，外部基础模型按各自条款获取。
+四类模型权重均已补齐，每类25个检查点，总计100个。ESC、PRRpath 各一个 ZIP；
+PRRpath+text、PRRfull 各两个 ZIP，分别包含第1–3折的15个检查点和第4–5折的10个
+检查点。所有附件均低于 GitHub Release 的单文件大小限制。
+
+两个分包是可独立安装的 ZIP，请逐个安装，不需要拼接成一个文件：
+
+```sh
+pdac-prr-weights --bundle . --install PDAC_PRR_prrpath_text_weights_v0.1.0_part1.zip
+pdac-prr-weights --bundle . --install PDAC_PRR_prrpath_text_weights_v0.1.0_part2.zip
+pdac-prr-weights --bundle . --install PDAC_PRR_prrfull_weights_v0.1.0_part1.zip
+pdac-prr-weights --bundle . --install PDAC_PRR_prrfull_weights_v0.1.0_part2.zip
+pdac-prr-weights --bundle . --model prrpath_text prrfull
+```
+
+安装完整的某类权重后，再运行该模型。发布说明见
+[RELEASE_NOTES.md](docs/RELEASE_NOTES.md)。源码许可证先按 MIT 准备；权重发布许可
+需作者单独确定，外部基础模型按各自条款获取。
 
 ## 运行示例
 

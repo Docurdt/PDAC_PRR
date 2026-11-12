@@ -1,6 +1,6 @@
 # Validation of source release 0.1.0
 
-Validation date: 2026-10-07. Tests used synthetic numeric inputs unless explicitly
+Initial validation: 2026-10-07. Complete multimodal-weight validation: 2026-10-08. Tests used synthetic numeric inputs unless explicitly
 described as a comparison with a retained source-server artifact. No training or
 cohort reruns were performed, and no source-server files were modified.
 
@@ -16,14 +16,22 @@ four families (maximum observed absolute difference 0).
 | Check | ESC | PRRpath | PRRpath+text | PRRfull |
 | --- | ---: | ---: | ---: | ---: |
 | Source-server retained checkpoints strictly loaded in the earlier read-only audit | 25 | 25 | 25 | 25 |
-| Complete checkpoints copied and strictly loaded locally | 25 | 25 | 1 | 0 |
-| Complete model-family archive in this handoff | Yes | Yes | No | No |
+| Complete checkpoints copied and strictly loaded locally | 25 | 25 | 25 | 25 |
+| Complete model-family archives in this handoff | Yes | Yes | Yes, 2 ZIPs | Yes, 2 ZIPs |
 | Packaged class AST matches retained source | Yes | Yes | Yes | Yes |
 
-All 50 checkpoints in the ESC and PRRpath archives passed exact source-size and
-SHA-256 verification. Installing both archives into a clean weight directory and
-verifying the installed files succeeded. The first source handoff contains all
-four model implementations but does not contain complete text/full weight sets.
+All 100 local checkpoints passed exact source-size and SHA-256 verification.
+ESC and PRRpath were validated in the initial handoff. The additional 50
+PRRpath+text and PRRfull checkpoints were installed from their four ZIPs into a
+new temporary bundle; all installed files passed SHA-256 verification and strict
+loading into the original and packaged model definitions. Each new family has
+25 checkpoints, with five retained epochs in each of five folds.
+
+The complete PRRpath+text and PRRfull ensembles were compared with the retained
+original classes on two synthetic rows per model. Mean scores, all five fold
+scores and command-line inference outputs matched exactly (maximum observed
+absolute difference 0). The ZIP member lists and every member's source hash
+were checked. Each of the six model assets is under 2 GiB.
 
 ## Local functional checks
 
@@ -45,8 +53,8 @@ four model implementations but does not contain complete text/full weight sets.
   exceptions. Browser file-upload interaction was not separately automated.
 
 The host sandbox prevented OpenMP shared-memory creation during the H5 workflow
-check. The same check passed under approved local CPU execution; the model source
-was not changed to work around that environment restriction.
+and the complete multimodal command-line checks. These checks passed under
+approved local CPU execution with the retained model definitions.
 
 ## Existing cached-artifact comparison
 
@@ -61,7 +69,8 @@ records; they are not complete patient-cohort reproduction.
 
 Raw WSI segmentation and feature extraction with external TRIDENT and the four
 real foundation encoders were not run end to end in the local release
-environment. Complete local text/full ensembles require the remaining weights.
+environment. Complete local text/full ensembles were validated with synthetic
+numeric features; a real pretrained-BERT-to-multimodal pipeline was not run locally.
 A fixed prospective single-patient clinical scaler was not retained with the
 source checkpoints. Paper wording, threshold boundary conventions and statistical
 rounding are being reconciled separately; this source release does not claim that

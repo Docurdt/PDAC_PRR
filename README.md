@@ -57,10 +57,22 @@ dictionaries strictly. It averages five retained epoch predictions within each
 inner fold, then averages all five folds. A selected family requires all 25
 listed checkpoints. See `model_manifest.json` for the exact files.
 
-The source package contains all four architectures. The first local weight
-assets available for upload are ESC and PRRpath. PRRpath+text and PRRfull archives
-are not complete in this first handoff; their checkpoint manifests are included.
-Their ensemble cannot run until all corresponding weights have been installed.
+All four model families have complete weight sets: 25 checkpoints per family,
+100 checkpoints in total. ESC and PRRpath each use one ZIP. PRRpath+text and
+PRRfull each use two independently installable ZIPs to remain under the GitHub
+Release per-file size limit. Install both parts for a selected multimodal family:
+
+```sh
+pdac-prr-weights --bundle . --install PDAC_PRR_prrpath_text_weights_v0.1.0_part1.zip
+pdac-prr-weights --bundle . --install PDAC_PRR_prrpath_text_weights_v0.1.0_part2.zip
+pdac-prr-weights --bundle . --install PDAC_PRR_prrfull_weights_v0.1.0_part1.zip
+pdac-prr-weights --bundle . --install PDAC_PRR_prrfull_weights_v0.1.0_part2.zip
+pdac-prr-weights --bundle . --model prrpath_text prrfull
+```
+
+Keep each ZIP's filename and install each part separately. Part 1 contains
+folds 1–3 (15 checkpoints); part 2 contains folds 4–5 (10 checkpoints).
+Release notes and asset instructions: [RELEASE_NOTES.md](docs/RELEASE_NOTES.md).
 
 ## Prepare inputs from a whole-slide image
 

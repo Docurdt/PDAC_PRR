@@ -1,6 +1,6 @@
 {
   "release_version": "0.1.0",
-  "validation_date": "2026-10-07",
+  "validation_date": "2026-10-08",
   "source_ready_for_upload": true,
   "published_to_github": false,
   "license": "MIT",
@@ -13,15 +13,14 @@
   ],
   "complete_weight_archives": [
     "esc",
-    "prrpath"
-  ],
-  "incomplete_weight_archives": [
+    "prrpath",
     "prrpath_text",
     "prrfull"
   ],
+  "incomplete_weight_archives": [],
   "expected_checkpoints_per_family": 25,
   "source_server_strict_load_count": 100,
-  "local_archived_checkpoints_verified": 50,
+  "local_archived_checkpoints_verified": 100,
   "definition_conformance": {
     "esc": {
       "source_ast_matches": true,
@@ -36,12 +35,12 @@
     "prrpath_text": {
       "source_ast_matches": true,
       "synthetic_score_max_abs_difference": 0.0,
-      "local_checkpoints_strict_loaded": 1
+      "local_checkpoints_strict_loaded": 25
     },
     "prrfull": {
       "source_ast_matches": true,
       "synthetic_score_max_abs_difference": 0.0,
-      "local_checkpoints_strict_loaded": 0
+      "local_checkpoints_strict_loaded": 25
     }
   },
   "synthetic_h5_workflow": {
@@ -66,5 +65,32 @@
   "raw_wsi_end_to_end_tested": false,
   "manuscript_text_reconciled": false,
   "server_files_modified": false,
-  "weight_distribution_license": "not specified by the source-only license"
+  "weight_distribution_license": "not specified by the source-only license",
+  "weight_asset_count": 6,
+  "weight_archives_per_family": {
+    "esc": 1,
+    "prrpath": 1,
+    "prrpath_text": 2,
+    "prrfull": 2
+  },
+  "complete_multimodal_ensemble_validation": {
+    "prrfull": {
+      "archive_install_passed": true,
+      "installed_and_hash_verified": 25,
+      "original_and_packaged_strict_loads": 25,
+      "source_ast_matches": true,
+      "ensemble_score_max_abs_difference": 0.0,
+      "ensemble_fold_max_abs_difference": 0.0,
+      "cli_max_abs_difference": 0.0
+    },
+    "prrpath_text": {
+      "archive_install_passed": true,
+      "installed_and_hash_verified": 25,
+      "original_and_packaged_strict_loads": 25,
+      "source_ast_matches": true,
+      "ensemble_score_max_abs_difference": 0.0,
+      "ensemble_fold_max_abs_difference": 0.0,
+      "cli_max_abs_difference": 0.0
+    }
+  }
 }
