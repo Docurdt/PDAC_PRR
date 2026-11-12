@@ -74,6 +74,24 @@ Keep each ZIP's filename and install each part separately. Part 1 contains
 folds 1–3 (15 checkpoints); part 2 contains folds 4–5 (10 checkpoints).
 Release notes and asset instructions: [RELEASE_NOTES.md](docs/RELEASE_NOTES.md).
 
+## Third-party foundation model access
+
+This project does not host, mirror or redistribute third-party foundation model
+weights. Users must obtain GigaPath, UNI-v2, CTransPath, H-optimus-0 and Chinese
+BERT directly from their original providers and comply with the respective
+licenses and terms of use. Official model pages are listed in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+Installing TRIDENT does not grant access to these model weights. Users must
+request access or accept the provider's conditions where required, using their
+own accounts. Access and approval requirements depend on the individual model.
+
+After obtaining any required access, configure local weights or authorized
+upstream downloads in the pinned TRIDENT environment. The WSI wrapper accepts
+local pathology encoder checkpoint paths through `--weights-json`. Chinese BERT
+is obtained separately for report encoding; `scripts/prepare_inputs.py` accepts
+`--bert-path` for a local BERT model directory.
+
 ## Prepare inputs from a whole-slide image
 
 WSI processing requires the external TRIDENT checkout and foundation weights in
